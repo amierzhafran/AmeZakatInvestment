@@ -40,9 +40,9 @@ The application follows the official Zakat calculation guidelines:
 
 ## 👤 Developer Information
 
-- **Name**: [Your Name Here]
-- **Student ID**: [Your Student ID Here]
-- **Course**: Mobile Technology Assignment
+- **Name**: Amier Zhafran
+- **Student ID**: 2024353053
+- **Course**: ICT602
 
 ## 📄 License
 
