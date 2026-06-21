@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_orange"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/midnight_blue"
+        app:titleTextColor="@color/rich_gold"
+        android:elevation="4dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Instruction -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter weight &amp; price, select type, then Calculate"
+                android:textColor="@color/midnight_blue"
+                android:textSize="14sp"
+                android:padding="10dp"
+                android:background="@color/rich_gold"
+                android:textStyle="italic"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Input 1: Weight -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:boxStrokeColor="@color/rich_gold"
+                app:hintTextColor="@color/midnight_blue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Gold Weight (gram)"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/midnight_blue" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Input 2: Gold Price -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:errorEnabled="true"
+                app:boxStrokeColor="@color/rich_gold"
+                app:hintTextColor="@color/midnight_blue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Gold Price per gram (RM)"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/midnight_blue" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Input 3: Type (Dropdown / Spinner) -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Type of Gold"
+                android:textColor="@color/midnight_blue"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinnerType"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:padding="8dp"
+                android:textColor="@color/black" />
+
+            <!-- Uruf Notice -->
+            <TextView
+                android:id="@+id/tvUrufNotice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Uruf for Keep: 85g"
+                android:textSize="12sp"
+                android:textColor="@color/midnight_blue"
+                android:textStyle="italic" />
+
+            <!-- Calculate Button -->
+            <Button
+                android:id="@+id/btnCalculate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="CALCULATE ZAKAT"
+                android:backgroundTint="@color/midnight_blue"
+                android:textColor="@color/rich_gold"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <!-- Clear Button -->
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="CLEAR"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/rich_gold" />
+
+            <!-- Outputs -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Results"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/midnight_blue" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@color/white"
+                android:elevation="4dp"
+                android:layout_marginTop="8dp">
+
+                <!-- Output 1 -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Gold Value:"
+                    android:textColor="@color/midnight_blue"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tvTotalValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RM 0.00"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Output 2 -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Zakat Payable:"
+                    android:textColor="@color/midnight_blue"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tvZakatPayable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RM 0.00"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Output 3 -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Zakat (2.5%):"
+                    android:textColor="@color/midnight_blue"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tvTotalZakat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RM 0.00"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/rich_gold" />
+            </LinearLayout>
+
+            <!-- About Button -->
+            <Button
+                android:id="@+id/btnAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="ABOUT"
+                android:backgroundTint="@color/rich_gold"
+                android:textColor="@color/midnight_blue"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

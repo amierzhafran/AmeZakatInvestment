@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">AmeZakatInvestment</string>
+    <string name="app_url">https://github.com/amierzhafran</string>
+
+    <!-- Dropdown options -->
+    <string-array name="gold_types">
+        <item>Keep (85g uruf)</item>
+        <item>Wear (200g uruf)</item>
+    </string-array>
+
+    <!-- Labels -->
+    <string name="label_weight">Weight of Gold (grams)</string>
+    <string name="label_type">Type of Gold</string>
+    <string name="label_value">Current Gold Value (RM/gram)</string>
+    <string name="hint_weight">Enter weight in grams</string>
+    <string name="hint_value">Enter price per gram</string>
+
+    <!-- Output Labels -->
+    <string name="label_total_value">Total Value of Gold</string>
+    <string name="label_zakat_payable">Zakat Payable Amount</string>
+    <string name="label_exemption">Gold Weight Exempted</string>
+    <string name="label_zakat_due">Total Zakat (2.5%)</string>
+
+    <!-- Buttons -->
+    <string name="btn_calculate">Calculate Zakat</string>
+    <string name="btn_clear">Clear</string>
+    <string name="btn_about">About</string>
+
+    <!-- About Page -->
+    <string name="about_title">About Zakat Calculator</string>
+    <string name="about_developer">Developer: Amier Zhafran</string>
+    <string name="about_student_id">Student ID: 2024353053</string>
+    <string name="about_course">ICT602 - MOBILE TECHNOLOGY AND DEVELOPMENT</string>
+    <string name="about_copyright">© 2026 AmeZakatInvestment. All rights reserved.</string>
+    <string name="about_url_label">Visit our GitHub:</string>
+
+    <!-- Messages -->
+    <string name="msg_calculate_success">Zakat calculated successfully!</string>
+    <string name="msg_no_zakat">No zakat payable (below uruf threshold)</string>
+    <string name="error_weight_empty">Please enter gold weight</string>
+    <string name="error_weight_invalid">Invalid weight. Must be > 0</string>
+    <string name="error_value_empty">Please enter gold value per gram</string>
+    <string name="error_value_invalid">Invalid value. Must be > 0</string>
+    <string name="error_type_not_selected">Please select gold type (Keep or Wear)</string>
+    <string name="notice_uruf_keep">Uruf for Keep: 85g</string>
+    <string name="notice_uruf_wear">Uruf for Wear: 200g</string>
+    <string name="help_instruction">Enter weight &amp; price, select type, then Calculate</string>
+    <string name="share_text">Check out AmeZakatInvestment - Zakat Gold Calculator: %s</string>
+
+    <!-- Menu -->
+    <string name="menu_share">Share</string>
+    <string name="menu_about">About</string>
+</resources>
